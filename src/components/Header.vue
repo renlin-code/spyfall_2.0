@@ -30,7 +30,8 @@ export default {
 </script>
 
 <style scoped>
-    header .header-container {
+
+header .header-container {
     width: 100%;
     height: 90px;
     margin: 0 auto;

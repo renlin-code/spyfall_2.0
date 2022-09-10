@@ -26,3 +26,54 @@ body {
   padding: 0 40px;
   background: var(--white-color);
 }
+
+.primary-button {
+  width: 80%;
+  height: auto;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 40px;
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  text-decoration: none;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--black-color);
+}
+
+.menu-item-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.primary-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--black-color);
+  text-align: center;
+  margin: 50px 0px 20px;
+}
+.secondary-title {
+  display: inline-block;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  padding: 4px;
+  border-radius: 6px;
+  background-color: var(--secondary-color);
+}
+.text-content {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  color: var(--black-color);
+}
