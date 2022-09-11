@@ -65,13 +65,13 @@ export default {
             text: "",
             url: `${this.urlToShare}`
             });
+            
+            this.$emit('closeMenu');
         }
     },
     mounted() {
         this.navigatorInstance = navigator;
         this.urlToShare = location.href;
-
-        console.log(this.navigatorInstance)
     },
 }
 </script>

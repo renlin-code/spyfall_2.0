@@ -10,7 +10,15 @@ const router = createRouter({
     },
     {
       path: '/rules',
-      component: () => import('../views/RulesView.vue'),
+      component: () => import('../views/RulesView.vue')
+    },
+    {
+      path: '/settings',
+      component: () => import('../views/SettingsView.vue')
+    },
+    {
+      path: '/params',
+      component: () => import('../views/MatchParamsView.vue')
     }
   ]
 })

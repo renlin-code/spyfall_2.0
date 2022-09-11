@@ -1,6 +1,6 @@
 <template>
     <section class="rules-section">
-        <router-link class="close-button" to="/">Back</router-link>
+        <!-- <router-link class="close-button" to="/">Back</router-link> -->
         <h1 class="primary-title rules-title">
             <span class="menu-item-icon rules-icon">
                 <svg width="100%" height="100%" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,23 +36,6 @@
     top: 0;
     z-index: -1;
 }
-.close-button {
-    display: inline;
-    position: absolute;
-    top: 10px;
-    right: 0;
-    font-size: 1.6rem;
-    font-weight: bold;
-    width: 60px;
-    height: auto;
-    padding: 2px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: #FABABA;
-    text-align: center;
-    color: var(--black-color);
-}
 .rules-section--articles-container {
     display: flex;
     height: calc(100vh - 250px);
@@ -61,18 +44,5 @@
     justify-content: space-between;
     align-items: center;
     gap: 26px;
-}
-.secondary-title {
-    display: inline-block;
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-    padding: 4px;
-    border-radius: 6px;
-    background-color: var(--secondary-color);
-}
-.text-content {
-    font-size: 1.3rem;
-    line-height: 1.6rem;
-    color: var(--black-color);
 }
 </style>

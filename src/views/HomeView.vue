@@ -4,7 +4,7 @@
             <FigureHero />
         </div>
         <p>The game where you can feel like a real detective or a cunning spy</p>
-        <button id="matchParamButton" class="primary-button">PLAY</button>    
+        <router-link to="/params" class="primary-button">PLAY</router-link>    
     </section>
 </template>
 

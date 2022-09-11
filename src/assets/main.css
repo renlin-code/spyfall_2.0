@@ -43,6 +43,37 @@ body {
   background-color: var(--black-color);
 }
 
+.secondary-button {
+  width: 80%;
+  height: auto;
+  font-size: 2.2rem;
+  padding: 6px;
+  margin-top: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  color: var(--black-color);
+  background-color: var(--white-color);
+  border: 2px solid var(--main-color);
+}
+.close-button {
+  display: inline;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  width: 60px;
+  height: auto;
+  padding: 2px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #FABABA;
+  text-align: center;
+  color: var(--black-color);
+}
+
 .menu-item-icon {
   display: block;
   width: 16px;
@@ -52,7 +83,11 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
-
+.primary-text {
+  font-size: 1.8rem;
+  text-align: left;
+  color: var(--dark-gray);
+}
 .primary-title {
   display: flex;
   justify-content: center;

@@ -3,7 +3,7 @@
         <div class="header-container">
             <div class="menu-icon-container">
                 <transition name="burger">
-                    <button v-show="!show" @click="show=!show" id="burgerMenu" class="burger-menu">
+                    <button @click="show=!show" id="burgerMenu" class="burger-menu">
                         <IconMenu />
                     </button>
                 </transition>
