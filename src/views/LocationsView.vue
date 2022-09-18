@@ -16,7 +16,7 @@
 import LayoutDefault from '../components/layouts/LayoutDefault.vue'
 import Header from '../components/headers/Header.vue'
 import Locations from '../components/Locations.vue'
-import Countdown from '../components/Countdown.vue'
+import Countdown from '../components/Timer.vue'
 
 export default {
     components: {LayoutDefault, Header, Locations, Countdown}

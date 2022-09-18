@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "circus",
+        "url": "https://imgur.com/k5aba5j.png"
+    },
+    {
+        "id": 2,
+        "name": "space station",
+        "url": "https://imgur.com/fPaugYh.png"
+    },
+    {
+        "id": 3,
+        "name": "north pole",
+        "url": "https://imgur.com/dNg3n7Y.png"
+    },
+    {
+        "id": 4,
+        "name": "police station",
+        "url": "https://imgur.com/3nJaB4A.png"
+    },
+    {
+        "id": 5,
+        "name": "mountain peak",
+        "url": "https://imgur.com/kTNvyNv.png"
+    },
+    {
+        "id": 6,
+        "name": "desert island",
+        "url": "https://imgur.com/62aGvcI.png"
+    },
+    {
+        "id": 7,
+        "name": "conference",
+        "url": "https://imgur.com/znwS4AU.png"
+    },
+    {
+        "id": 8,
+        "name": "spa salon",
+        "url": "https://imgur.com/6Z8WsGr.png"
+    },
+    {
+        "id": 9,
+        "name": "swimming pool",
+        "url": "https://imgur.com/lbOCxKU.png"
+    },
+    {
+        "id": 10,
+        "name": "submarine",
+        "url": "https://imgur.com/n4lJwKS.png"
+    },
+    {
+        "id": 11,
+        "name": "casino",
+        "url": "https://imgur.com/dnFqN91.png"
+    },
+    {
+        "id": 12,
+        "name": "aircraft",
+        "url": "https://imgur.com/HG4ngaY.png"
+    },
+    {
+        "id": 13,
+        "name": "school",
+        "url": "https://imgur.com/ItgeHwB.png"
+    },                   
+    {
+        "id": 14,
+        "name": "pirate ship",
+        "url": "https://imgur.com/0qUlXv0.png"
+    },
+    {
+        "id": 15,
+        "name": "graveyard",
+        "url": "https://imgur.com/XBzeArD.png"
+    },
+    {
+        "id": 16,
+        "name": "camping",
+        "url": "https://imgur.com/EUySLwS.png"
+    }        
+]

@@ -3,8 +3,24 @@
         <div class="popup">
             <p>Are you sure you want to finish the game?</p>
             <div class="popup--buttons-container">
-                <button class="popup--button"><span class="popup--icon yes-icon"></span>Yes</button>
-                <button class="popup--button"><span class="popup--icon no-icon"></span>No</button>
+                <button class="popup--button">
+                    <router-link to="/">
+                        <span class="popup--icon">
+                            <svg width="100%" height="100%" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 7L7 13L17 1" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </router-link>
+                    Yes
+                </button>
+                <button class="popup--button">
+                    <span class="popup--icon">
+                        <svg width="100%" height="100%" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 13L1 1M13 1L1 13" stroke="#EF5B5B" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    No
+                </button>
             </div>
         </div>
     </div>
@@ -12,7 +28,7 @@
 
 <style scoped>
 .popup--layer {
-    display: none;
+    display: grid;
     place-content: center;
     width: 100%;
     max-width: 450px;
@@ -21,9 +37,8 @@
     left: 0;
     top: 0;
     transition: all 800ms;
-    z-index: 3;
-    opacity: 1;
-    transform: scale(0);
+    z-index: 1;
+    /* transform: scale(0); */
     transition: all 300ms;
 }
 .popup--layer .popup {
@@ -62,15 +77,6 @@
     display: inline-block;
     width: 12px;
     height: 12px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.popup--layer .popup .yes-icon {
-    background-image: url("../assets/icons/yes.svg");
-}
-.popup--layer .popup .no-icon {
-    background-image: url("../assets/icons/no.svg");
 }
 
 </style>
