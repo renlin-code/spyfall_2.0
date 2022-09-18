@@ -1,27 +1,42 @@
 <template>
-    <section class="settings-section">
-        <!-- <router-link class="close-button" to="/">Back</router-link> -->
-        <h1 class="primary-title settings-title"><span class="menu-item-icon settings-icon"></span> SETTINGS</h1>
-        <div class="settings-section--articles-container">
-            <!-- <section class="languages-section">
-                <h2 class="secondary-title">LANGUAGES</h2>
-                <ul>
-                    <li><input checked name="language" type="radio" id="enLangButton" style="display: none;"> <label for="enLangButton">English</label></li>
-                    <li><input name="language" type="radio" id="esLangButton" style="display: none;"> <label for="esLangButton">Español</label></li>
-                    <li><input name="language" type="radio" id="ruLangButton" style="display: none;"> <label for="ruLangButton">Русский</label></li>
-                </ul>
-            </section> -->
-            <section class="themes-section">
-                <h2 class="secondary-title">THEMES</h2>
-                <ul>
-                    <li><input checked name="theme" type="radio" id="greenThemeButton" style="display: none;"><label for="greenThemeButton"></label></li>
-                    <li><input name="theme" type="radio" id="pinkThemeButton" style="display: none;"><label for="pinkThemeButton"></label></li>
-                    <li><input name="theme" type="radio" id="blueThemeButton" style="display: none;"><label for="blueThemeButton"></label></li>
-                </ul>
+    <LayoutDefault>
+        <template #header>
+            <Header />
+        </template>
+        <template #main>
+            <section class="settings-section">
+                <!-- <router-link class="close-button" to="/">Back</router-link> -->
+                <h1 class="primary-title settings-title"><span class="menu-item-icon settings-icon"></span> SETTINGS</h1>
+                <div class="settings-section--articles-container">
+                    <!-- <section class="languages-section">
+                        <h2 class="secondary-title">LANGUAGES</h2>
+                        <ul>
+                            <li><input checked name="language" type="radio" id="enLangButton" style="display: none;"> <label for="enLangButton">English</label></li>
+                            <li><input name="language" type="radio" id="esLangButton" style="display: none;"> <label for="esLangButton">Español</label></li>
+                            <li><input name="language" type="radio" id="ruLangButton" style="display: none;"> <label for="ruLangButton">Русский</label></li>
+                        </ul>
+                    </section> -->
+                    <section class="themes-section">
+                        <h2 class="secondary-title">THEMES</h2>
+                        <ul>
+                            <li><input checked name="theme" type="radio" id="greenThemeButton" style="display: none;"><label for="greenThemeButton"></label></li>
+                            <li><input name="theme" type="radio" id="pinkThemeButton" style="display: none;"><label for="pinkThemeButton"></label></li>
+                            <li><input name="theme" type="radio" id="blueThemeButton" style="display: none;"><label for="blueThemeButton"></label></li>
+                        </ul>
+                    </section>
+                </div>
             </section>
-        </div>
-    </section>
+        </template>
+    </LayoutDefault>
 </template>
+
+<script>
+import LayoutDefault from '../components/layouts/LayoutDefault.vue';
+import Header from '../components/headers/Header.vue';
+export default {
+    components: {LayoutDefault, Header}
+}
+</script>
 
 <style scoped>
 .settings-section {

@@ -112,3 +112,13 @@ body {
   line-height: 1.6rem;
   color: var(--black-color);
 }
+
+.view-enter-active,
+.view-leave-active {
+  transition: opacity 400ms ease;
+}
+
+.view-enter-from,
+.view-leave-to {
+    opacity: 0;
+}

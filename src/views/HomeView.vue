@@ -1,18 +1,27 @@
 <template>
-    <section class="main-section">
-        <div class="hero">
-            <FigureHero />
-        </div>
-        <p>The game where you can feel like a real detective or a cunning spy</p>
-        <router-link to="/params" class="primary-button">PLAY</router-link>    
-    </section>
+    <LayoutDefault>
+        <template #header>
+            <Header />
+        </template>
+        <template #main>
+            <section class="main-section">
+                <div class="hero">
+                    <FigureHero />
+                </div>
+                <p>The game where you can feel like a real detective or a cunning spy</p>
+                <router-link to="/params" class="primary-button">PLAY</router-link>    
+            </section>
+        </template>
+    </LayoutDefault>
 </template>
 
 <script>
+import LayoutDefault from '../components/layouts/LayoutDefault.vue';
+import Header from '../components/headers/Header.vue';
 import FigureHero from '../components/figures/FigureHero.vue';
 
 export default {
-    components: {FigureHero}
+    components: {LayoutDefault, Header, FigureHero}
 }
 </script>
 

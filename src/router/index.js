@@ -19,6 +19,14 @@ const router = createRouter({
     {
       path: '/params',
       component: () => import('../views/MatchParamsView.vue')
+    },
+    {
+      path: '/locations',
+      component: () => import('../views/LocationsView.vue')
+    },
+    {
+      path: '/match',
+      component: () => import('../views/MatchView.vue')
     }
   ]
 })
