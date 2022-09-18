@@ -10,7 +10,9 @@
             </div>
         </div>
         <p v-if="locations.length !== 0" :class="{'subject-name--visible' : showRole}" class="primary-text subject-name">{{ currentCardJSON.name.toUpperCase() }}</p>
-        <button @click="nextCard" class="primary-button">GOT IT</button>    
+        <transition name="view">
+            <button v-if="showRole" @click="nextCard" class="primary-button">GOT IT</button>    
+        </transition>
     </section>
 </template>
 
@@ -48,7 +50,7 @@ export default {
             }, 800)
         },
         nextCard() {
-            if (this.rotateCard && this.currentPlayer < this.matchRoles.length) {
+            if (this.currentPlayer < this.matchRoles.length) {
                 this.showRole = false;
                 this.rotateCard = false;
                 setTimeout(() => {
