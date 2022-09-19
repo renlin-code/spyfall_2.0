@@ -10,10 +10,10 @@
                                 <path d="M1 7L7 13L17 1" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </span>
+                        Yes
                     </router-link>
-                    Yes
                 </button>
-                <button class="popup--button">
+                <button @click="$emit('closePopUp')" class="popup--button">
                     <span class="popup--icon">
                         <svg width="100%" height="100%" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13 13L1 1M13 1L1 13" stroke="#EF5B5B" stroke-width="2" stroke-linecap="round"/>

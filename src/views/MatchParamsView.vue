@@ -102,9 +102,10 @@ export default {
         const spiesFromLS = JSON.parse(sessionStorage.getItem("spiesAmount"));
         const timeFromLS = JSON.parse(sessionStorage.getItem("timeAmount"));
 
-        this.playersNoSpiesCount.amount = playersNoSpiesFromLS ? playersNoSpiesFromLS : 2;
-        this.spiesCount.amount = spiesFromLS ? spiesFromLS : 1;
-        this.timeCount.amount = timeFromLS ? timeFromLS : 5;
+        this.playersNoSpiesCount.amount = playersNoSpiesFromLS ? playersNoSpiesFromLS : this.playersNoSpiesCount.lowerLimit;
+        this.spiesCount.amount = spiesFromLS ? spiesFromLS : this.spiesCount.lowerLimit;
+        this.timeCount.amount = timeFromLS ? timeFromLS : this.timeCount.lowerLimit;
+        this.save();
     }
 }
 </script>

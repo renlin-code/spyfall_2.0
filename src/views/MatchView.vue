@@ -10,8 +10,8 @@
             <transition name="view">
                 <div v-if="stage===2">
                     <Locations />
-                    <Timer />
-                    <PopUp v-if="showPopUp" />
+                    <Timer @openPopUp="showPopUp = true" />
+                    <PopUp @closePopUp="showPopUp = false" v-if="showPopUp" />
                 </div>
             </transition>
         </template>
@@ -29,7 +29,7 @@ import PopUp from '../components/PopUp.vue';
 export default {
     components: {LayoutDefault, HeaderWithoutBurger, CardsParade, Locations, Timer, PopUp},
     data: () => ({
-        stage: 1,
+        stage: 2,
         showPopUp: false,
 
     })
