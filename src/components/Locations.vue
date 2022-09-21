@@ -131,6 +131,7 @@ export default {
     width: 300px;
     height: auto;
     border: 4px solid var(--white-color);
+    border-radius: 8px;
 }
 .locations-modal svg {
     position: absolute;
