@@ -12,7 +12,7 @@
                         <p class="primary-text spies-counter-text">SPY</p>
                         <p class="primary-text time-counter-text">MINUTES</p>
                         <div class="counter-container players-counter-container">
-                            <span>{{ playersNoSpiesCount.amount }}</span>
+                            <span :style="`background-color: ${color}30`">{{ playersNoSpiesCount.amount }}</span>
                             <button @click="decreaseCount(playersNoSpiesCount)" :class="{'transparent' : playersNoSpiesCount.amount === playersNoSpiesCount.lowerLimit}" class="minus-button">
                                 <svg width="100%" height="100%" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.71591 0 0 6.71591 0 15C0 23.2841 6.71591 30 15 30C23.2841 30 30 23.2841 30 15C30 6.71591 23.2841 0 15 0ZM9.54545 13.6364C9.1838 13.6364 8.83695 13.78 8.58122 14.0358C8.32549 14.2915 8.18182 14.6383 8.18182 15C8.18182 15.3617 8.32549 15.7085 8.58122 15.9642C8.83695 16.22 9.1838 16.3636 9.54545 16.3636H20.4545C20.8162 16.3636 21.1631 16.22 21.4188 15.9642C21.6745 15.7085 21.8182 15.3617 21.8182 15C21.8182 14.6383 21.6745 14.2915 21.4188 14.0358C21.1631 13.78 20.8162 13.6364 20.4545 13.6364H9.54545Z" fill="#5A5A5A"/>
@@ -25,7 +25,7 @@
                             </button>
                         </div>
                         <div class="counter-container spies-counter-container">
-                            <span>{{ spiesCount.amount }}</span>
+                            <span :style="`background-color: ${color}30`">{{ spiesCount.amount }}</span>
                             <button @click="decreaseCount(spiesCount)" :class="{'transparent' : spiesCount.amount === spiesCount.lowerLimit}" class="minus-button">
                                 <svg width="100%" height="100%" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.71591 0 0 6.71591 0 15C0 23.2841 6.71591 30 15 30C23.2841 30 30 23.2841 30 15C30 6.71591 23.2841 0 15 0ZM9.54545 13.6364C9.1838 13.6364 8.83695 13.78 8.58122 14.0358C8.32549 14.2915 8.18182 14.6383 8.18182 15C8.18182 15.3617 8.32549 15.7085 8.58122 15.9642C8.83695 16.22 9.1838 16.3636 9.54545 16.3636H20.4545C20.8162 16.3636 21.1631 16.22 21.4188 15.9642C21.6745 15.7085 21.8182 15.3617 21.8182 15C21.8182 14.6383 21.6745 14.2915 21.4188 14.0358C21.1631 13.78 20.8162 13.6364 20.4545 13.6364H9.54545Z" fill="#5A5A5A"/>
@@ -38,7 +38,7 @@
                             </button>
                         </div>
                         <div class="counter-container time-counter-container">
-                            <span>{{ timeCount.amount }}</span>
+                            <span :style="`background-color: ${color}30`">{{ timeCount.amount }}</span>
                             <button @click="decreaseCount(timeCount)" :class="{'transparent' : timeCount.amount === timeCount.lowerLimit}" class="minus-button">
                                 <svg width="100%" height="100%" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.71591 0 0 6.71591 0 15C0 23.2841 6.71591 30 15 30C23.2841 30 30 23.2841 30 15C30 6.71591 23.2841 0 15 0ZM9.54545 13.6364C9.1838 13.6364 8.83695 13.78 8.58122 14.0358C8.32549 14.2915 8.18182 14.6383 8.18182 15C8.18182 15.3617 8.32549 15.7085 8.58122 15.9642C8.83695 16.22 9.1838 16.3636 9.54545 16.3636H20.4545C20.8162 16.3636 21.1631 16.22 21.4188 15.9642C21.6745 15.7085 21.8182 15.3617 21.8182 15C21.8182 14.6383 21.6745 14.2915 21.4188 14.0358C21.1631 13.78 20.8162 13.6364 20.4545 13.6364H9.54545Z" fill="#5A5A5A"/>
@@ -51,7 +51,7 @@
                             </button>
                         </div>
                     </div>
-                    <router-link to="/locations" class="secondary-button">LOCATIONS</router-link>
+                    <router-link to="/locations" :style="`border: 2px solid ${color}`" class="secondary-button">LOCATIONS</router-link>
                 </div>
                 <router-link to="/match" class="primary-button">START</router-link>      
             </section>
@@ -60,9 +60,12 @@
 </template>
 
 <script>
+import { getColor } from "../mixins/getColor";
 import LayoutDefault from '../components/layouts/LayoutDefault.vue';
 import Header from '../components/headers/Header.vue';
+
 export default {
+    mixins: [getColor()],
     components: {LayoutDefault, Header},
     data: () => ({
         playersNoSpiesCount: {
@@ -174,7 +177,6 @@ export default {
     border-radius: 50%;
     text-align: center;
     font-size: 1.4rem;
-    background-color: var(--secondary-color);
 }
 .match-parameters-section .parameters-container .counters-wrapper .counter-container .minus-button,
 .match-parameters-section .parameters-container .counters-wrapper .counter-container .plus-button {

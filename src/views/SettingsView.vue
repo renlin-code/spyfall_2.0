@@ -17,11 +17,17 @@
                         </ul>
                     </section> -->
                     <section class="themes-section">
-                        <h2 class="secondary-title">THEMES</h2>
+                        <h2 :style="`background-color: ${color}30`" class="secondary-title">THEMES</h2>
                         <ul>
-                            <li><input checked name="theme" type="radio" id="greenThemeButton" style="display: none;"><label for="greenThemeButton"></label></li>
-                            <li><input name="theme" type="radio" id="pinkThemeButton" style="display: none;"><label for="pinkThemeButton"></label></li>
-                            <li><input name="theme" type="radio" id="blueThemeButton" style="display: none;"><label for="blueThemeButton"></label></li>
+                            <li
+                            @click="select(1)"
+                            :class="{'selected' : selected === 1}"></li>
+                            <li
+                            @click="select(2)"
+                            :class="{'selected' : selected === 2}"></li>
+                            <li
+                            @click="select(3)"
+                            :class="{'selected' : selected === 3}"></li>
                         </ul>
                     </section>
                 </div>
@@ -31,10 +37,44 @@
 </template>
 
 <script>
+import { getColor } from "../mixins/getColor";
 import LayoutDefault from '../components/layouts/LayoutDefault.vue';
 import Header from '../components/headers/Header.vue';
+
 export default {
-    components: {LayoutDefault, Header}
+    mixins: [getColor()],
+    components: {LayoutDefault, Header},
+    data: () => ({
+        selected: null
+    }),
+    methods: {
+        select(option) {
+            this.selected = option;
+
+            if (option === 1) this.color = "#C6FF00";
+            else if (option === 2) this.color = "#FA00FF";
+            else this.color = "#2D53DA";
+            
+            location.reload();
+        },
+        watchHandler(option) {
+            this.selected = option;
+            this.save();
+        },
+        save() {
+            localStorage.setItem("color", JSON.stringify(this.color));
+        }
+    },
+    watch: {
+        color(value) {
+            if (value === "#C6FF00") this.watchHandler(1);
+            else if (value === "#FA00FF") this.watchHandler(2);
+            else this.watchHandler(3);
+        }
+    },
+    created() {
+        this.save();
+    }
 }
 </script>
 
@@ -59,26 +99,6 @@ export default {
     gap: 40px;
     margin-top: 50px;
 }
-.settings-section .settings-section--articles-container .languages-section ul {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    gap: 10px;
-}
-.settings-section .settings-section--articles-container .languages-section ul li label {
-    font-size: 1.6rem;
-    padding: 0;
-    background: rgba(0, 0, 0, 0);
-    border: none;
-    cursor: pointer;
-}
-.settings-section .settings-section--articles-container .languages-section ul li input:checked+label {
-    border-bottom: 3px solid rgba(0, 0, 0, 0.5);
-}
 .settings-section .settings-section--articles-container .themes-section {
     display: flex;
     flex-direction: column;
@@ -94,7 +114,7 @@ export default {
     list-style: none;
     gap: 14px;
 }
-.settings-section .settings-section--articles-container .themes-section ul li label {
+.settings-section .settings-section--articles-container .themes-section ul li {
     display: block;
     width: 40px;
     height: 40px;
@@ -103,16 +123,16 @@ export default {
     cursor: pointer;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.7);
 }
-.settings-section .settings-section--articles-container .themes-section ul li input:checked+label {
+.settings-section .settings-section--articles-container .themes-section ul li.selected {
     box-shadow: 1px 2px 4px rgba(255, 255, 255, 0.7);
 }
-.settings-section .settings-section--articles-container .themes-section ul li:nth-child(1) label {
+.settings-section .settings-section--articles-container .themes-section ul li:nth-child(1) {
     background-color: #C6FF00;
 }
-.settings-section .settings-section--articles-container .themes-section ul li:nth-child(2) label {
+.settings-section .settings-section--articles-container .themes-section ul li:nth-child(2) {
     background-color: #FA00FF;
 }
-.settings-section .settings-section--articles-container .themes-section ul li:nth-child(3) label {
+.settings-section .settings-section--articles-container .themes-section ul li:nth-child(3) {
     background-color: #2D53DA;
 }
 </style>

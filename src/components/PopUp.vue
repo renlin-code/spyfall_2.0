@@ -3,15 +3,13 @@
         <div class="popup">
             <p>Are you sure you want to finish the game?</p>
             <div class="popup--buttons-container">
-                <button class="popup--button">
-                    <router-link to="/">
-                        <span class="popup--icon">
-                            <svg width="100%" height="100%" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 7L7 13L17 1" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
-                        Yes
-                    </router-link>
+                <button @click="resetMatch()" class="popup--button">
+                    <span class="popup--icon">
+                        <svg width="100%" height="100%" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 7L7 13L17 1" stroke="#C6FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    Yes
                 </button>
                 <button @click="$emit('closePopUp')" class="popup--button">
                     <span class="popup--icon">
@@ -25,6 +23,17 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    methods: {
+        resetMatch() {
+            sessionStorage.setItem("stage", JSON.stringify(1));
+            this.$router.push("/");
+        }
+    }
+}
+</script>
 
 <style scoped>
 .popup--layer {
@@ -62,6 +71,7 @@
     margin: 30px auto 0;
 }
 .popup--layer .popup .popup--button {
+    color: var(--black-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,6 +82,10 @@
     border: none;
     cursor: pointer;
     background: rgba(0, 0, 0, 0);
+}
+.popup--layer .popup .popup--button a {
+    color: var(--black-color);
+    font-size: 1.6rem;
 }
 .popup--layer .popup .popup--icon {
     display: inline-block;

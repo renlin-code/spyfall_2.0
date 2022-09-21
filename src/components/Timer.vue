@@ -1,6 +1,6 @@
 <template>
     <div class="countdown-container">
-        <div class="countdown">
+        <div :style="`background: linear-gradient(to bottom left, var(--black-color), ${color})`" class="countdown">
             <p>{{ timeToShow }}</p>
         </div>
         <button @click="$emit('openPopUp')" class="stop-button countdown-button">
@@ -13,7 +13,10 @@
 </template>
 
 <script>
+import { getColor } from "../mixins/getColor";
+
 export default {
+    mixins: [getColor()],
     data: () => ({
         pauseTimer: false,
         timeInSeconds: false,
@@ -39,7 +42,6 @@ export default {
                 if (!this.pauseTimer) {
                     this.timeInSeconds--;
                     sessionStorage.setItem("currMatchTime", JSON.stringify(this.timeInSeconds));
-                    console.log(this.timeInSeconds);
                 }
             }, 1000)
         },
@@ -89,7 +91,6 @@ export default {
     width: 30%;
     height: 38px;
     border-radius: 4px;
-    background: linear-gradient(to bottom left, var(--black-color), var(--main-color));
 }
 .countdown-container .countdown p {
     font-family: "Dejavu Serif";

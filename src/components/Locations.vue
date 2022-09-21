@@ -7,17 +7,18 @@
                     <img :src="item.url" alt="location" class="location-card--image">
                     <div class="location-card__loading-layer"></div>
                 </figure>
-                <p class="location-card--name">{{ item.name.toUpperCase() }}</p>
+                <p :style="`background-color: ${color}30`" class="location-card--name">{{ item.name.toUpperCase() }}</p>
             </div>
         </div>    
     </div>
 </template>
 
 <script>
+import { getColor } from "../mixins/getColor";
 import { fetchLocations } from "../mixins/fetchLocations";
 
 export default {
-    mixins: [fetchLocations()]
+    mixins: [fetchLocations(), getColor()]
 }
 </script>
 
@@ -87,7 +88,6 @@ export default {
     text-align: center;
     font-size: 1.2rem;
     font-weight: semi-bold;
-    background-color: var(--secondary-color);
     margin: 6px auto 6px;
     padding: 2px auto;
     border-radius: 4px;

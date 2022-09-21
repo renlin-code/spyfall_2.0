@@ -53,8 +53,6 @@ body {
   cursor: pointer;
   text-align: center;
   color: var(--black-color);
-  background-color: var(--white-color);
-  border: 2px solid var(--main-color);
 }
 .close-button {
   display: inline;
@@ -105,7 +103,6 @@ body {
   margin-bottom: 10px;
   padding: 4px;
   border-radius: 6px;
-  background-color: var(--secondary-color);
 }
 .text-content {
   font-size: 1.3rem;

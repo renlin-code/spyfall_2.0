@@ -2,7 +2,7 @@
     <section class="showing-cards-section">
         <h1 class="primary-title player-numb">PLAYER {{ currentPlayer }}</h1>
         <div @click="revealCard" :class="{'card-container--rotated': rotateCard}" class="card-container">
-            <div class="card-side card-front">
+            <div :style="`background: linear-gradient(to bottom left, var(--black-color), ${color})`" class="card-side card-front">
                 <h1 class="primary-title reveal-text">REVEAL</h1>
             </div>
             <div class="card-side card-back">
@@ -17,10 +17,11 @@
 </template>
 
 <script>
+import { getColor } from "../mixins/getColor";
 import { fetchLocations } from '../mixins/fetchLocations';
 
 export default {
-    mixins: [fetchLocations()],
+    mixins: [getColor(), fetchLocations()],
     data: () => ({
         spyJSON: {
             "id": "-",
@@ -151,7 +152,6 @@ export default {
 .showing-cards-section .card-container .card-front {
     display: grid;
     place-content: center;
-    background: linear-gradient(to bottom left, var(--black-color), var(--main-color));
 }
 .showing-cards-section .card-container .card-front .reveal-text {
     margin: 0 auto;

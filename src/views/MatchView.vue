@@ -29,18 +29,31 @@ import PopUp from '../components/PopUp.vue';
 export default {
     components: {LayoutDefault, HeaderWithoutBurger, CardsParade, Locations, Timer, PopUp},
     data: () => ({
-        stage: 2,
+        stage: 1,
         showPopUp: false,
-
-    })
+    }),
+    methods: {
+        save() {
+            sessionStorage.setItem("stage", JSON.stringify(this.stage));
+        }
+    },
+    watch: {
+        stage() {
+            this.save();
+        }
+    },
+    created() {
+        const stageFromLS = JSON.parse(sessionStorage.getItem("stage"));
+        this.stage = stageFromLS ? stageFromLS : 1;
+    }
 }
 </script>
 
 <style scoped>
-    div >>> .locations-title {
+    div :deep() .locations-title {
         top: -32px;
     }
-    div >>> .locations-wrapper {
+    div :deep() .locations-wrapper {
         height: 70vh;
     }
 </style>
