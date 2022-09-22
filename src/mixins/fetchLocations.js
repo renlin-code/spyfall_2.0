@@ -4,7 +4,7 @@ export const fetchLocations = () => ({
     }),
     methods: {
         async fetchAllLocations() {
-            const url = "../../locations.json";
+            const url = "https://mocki.io/v1/c55cbcd1-3b60-46e7-adbf-d286ddf0078b";
             const res = await fetch(url);
             this.locations = await res.json();
         }
