@@ -55,7 +55,7 @@ export default {
             else if (option === 2) this.color = "#FA00FF";
             else this.color = "#2D53DA";
             
-            // location.reload();
+            location.reload();
         },
         watchHandler(option) {
             this.selected = option;
