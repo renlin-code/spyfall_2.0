@@ -1,16 +1,16 @@
 <template>
     <section class="showing-cards-section">
         <h1 class="primary-title player-numb">PLAYER {{ currentPlayer }}</h1>
-        <div @click="revealCard" :class="{'card-container--rotated': rotateCard}" class="card-container">
+        <div @click="revealCard" class="card-container">
             <div class="card-side card-back"
             :style="{'backgroundImage': `url(${currentCardJSON.url})`}"
             >
             </div>
-            <div class="card-side card-front"
+            <div class="card-side card-front" :class="{'card-front--hidden' : showingCard}"
             :style="`
-                background: -moz-linear-gradient(45deg, rgba(56,55,55,1) 25%, ${color} 75%);
-                background: -webkit-linear-gradient(45deg, rgba(56,55,55,1) 25%, ${color} 75%);
-                background: linear-gradient(45deg, rgba(56,55,55,1) 25%, ${color} 75%);
+                background: -moz-linear-gradient(45deg, rgba(56,55,55,1) 0%, ${color} 100%);
+                background: -webkit-linear-gradient(45deg, rgba(56,55,55,1) 0%, ${color} 100%);
+                background: linear-gradient(45deg, rgba(56,55,55,1) 0%, ${color} 100%);
             `">
                 REVEAL
             </div>
@@ -46,12 +46,12 @@ export default {
 
         currentPlayer: "1",
 
-        rotateCard: false,
+        showingCard: false,
         showRole: false
     }),
     methods: {
         revealCard() {
-            this.rotateCard = true;
+            this.showingCard = true;
             setTimeout(() => {
                 this.showRole = true;
             }, 800)
@@ -59,7 +59,7 @@ export default {
         nextCard() {
             if (this.currentPlayer < this.matchRoles.length) {
                 this.showRole = false;
-                this.rotateCard = false;
+                this.showingCard = false;
                 setTimeout(() => {
                     this.currentCardJSON = this.matchRoles[this.currentPlayer]
                     this.currentPlayer++;
@@ -141,12 +141,8 @@ export default {
     width: 240px;
     height: 240px;
     border-radius: 5px;
-    transform-style: preserve-3d;
     transition: all 1000ms;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.showing-cards-section .card-container--rotated {
-    transform: rotateY(180deg) !important;
 }
 
 .showing-cards-section .card-container .card-side {
@@ -161,11 +157,14 @@ export default {
     color: var(--white-color);
     font-size: 18px;
     font-weight: bold;
+    opacity: 1;
+    transition: opacity 800ms ease-in-out;
 }
+.card-front--hidden {
+    opacity: 0 !important;
+}
+
 .showing-cards-section .card-container .card-back {
-    background-color: var(--dark-gray);
-    transform: rotateY(180deg);
-    transition: all 1000ms;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
