@@ -2,7 +2,13 @@
     <section class="showing-cards-section">
         <h1 class="primary-title player-numb">PLAYER {{ currentPlayer }}</h1>
         <div @click="revealCard" :class="{'card-container--rotated': rotateCard}" class="card-container">
-            <div :style="`background: linear-gradient(to bottom left, var(--black-color), ${color})`" class="card-side card-front">
+            <div
+            :style="`
+                background: -moz-linear-gradient(45deg, rgba(56,55,55,1) 25%, ${color} 75%);
+                background: -webkit-linear-gradient(45deg, rgba(56,55,55,1) 25%, ${color} 75%);
+                background: linear-gradient(45deg, rgba(56,55,55,1) 25%, ${color} 75%);
+            `"
+            class="card-side card-front">
                 <h1 class="primary-title reveal-text">REVEAL</h1>
             </div>
             <div class="card-side card-back">
