@@ -45,6 +45,10 @@ export default {
     created() {
         const stageFromLS = JSON.parse(sessionStorage.getItem("stage"));
         this.stage = stageFromLS ? stageFromLS : 1;
+    },
+    beforeUnmount() {
+        this.stage = 1;
+        this.save();
     }
 }
 </script>
