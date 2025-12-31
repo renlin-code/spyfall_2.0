@@ -25,9 +25,6 @@
           v-if="showModal"
           class="locations-modal"
         >
-          <!-- <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24 9.4L22.6 8L16 14.6L9.4 8L8 9.4L14.6 16L8 22.6L9.4 24L16 17.4L22.6 24L24 22.6L17.4 16L24 9.4Z" fill="#f5f5f5"/>
-                    </svg> -->
           <img :src="modalSrc" alt="location" />
         </div>
       </transition>
@@ -98,13 +95,21 @@
 
   .locations-wrapper .location-card .location-card--name {
     display: inline-block;
-    width: 80%;
+    width: 90%;
     text-align: center;
-    font-size: 1.2rem;
-    font-weight: semi-bold;
-    margin: 6px auto 6px;
-    padding: 2px auto;
-    border-radius: 4px;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 10px auto 8px;
+    padding: 8px 0 7px 0;
+    border-radius: 8px;
+    color: #222;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.03em;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    transition:
+      background 0.2s,
+      color 0.2s;
   }
 
   .locations-modal {

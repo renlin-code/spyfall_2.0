@@ -27,7 +27,7 @@
     </p>
     <transition name="view">
       <button v-if="showRole" @click="nextCard" class="primary-button">
-        GOT IT
+        NEXT
       </button>
     </transition>
   </section>

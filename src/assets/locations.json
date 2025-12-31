@@ -1,82 +1,82 @@
 [
-    {
-        "id": 1,
-        "name": "circus",
-        "url": "/src/assets/images/circus.png"
-    },
-    {
-        "id": 2,
-        "name": "space station",
-        "url": "/src/assets/images/space-station.png"
-    },
-    {
-        "id": 3,
-        "name": "north pole",
-        "url": "/src/assets/images/north-pole.png"
-    },
-    {
-        "id": 4,
-        "name": "police station",
-        "url": "/src/assets/images/police-station.png"
-    },
-    {
-        "id": 5,
-        "name": "mountain peak",
-        "url": "/src/assets/images/mountain-peak.png"
-    },
-    {
-        "id": 6,
-        "name": "desert island",
-        "url": "/src/assets/images/desert-island.png"
-    },
-    {
-        "id": 7,
-        "name": "conference",
-        "url": "/src/assets/images/conference.png"
-    },
-    {
-        "id": 8,
-        "name": "spa salon",
-        "url": "/src/assets/images/spa-salon.png"
-    },
-    {
-        "id": 9,
-        "name": "swimming pool",
-        "url": "/src/assets/images/swimming-pool.png"
-    },
-    {
-        "id": 10,
-        "name": "submarine",
-        "url": "/src/assets/images/submarine.png"
-    },
-    {
-        "id": 11,
-        "name": "casino",
-        "url": "/src/assets/images/casino.png"
-    },
-    {
-        "id": 12,
-        "name": "aircraft",
-        "url": "/src/assets/images/aircraft.png"
-    },
-    {
-        "id": 13,
-        "name": "school",
-        "url": "/src/assets/images/school.png"
-    },                   
-    {
-        "id": 14,
-        "name": "pirate ship",
-        "url": "/src/assets/images/pirate-ship.png"
-    },
-    {
-        "id": 15,
-        "name": "graveyard",
-        "url": "/src/assets/images/graveyard.png"
-    },
-    {
-        "id": 16,
-        "name": "camping",
-        "url": "/src/assets/images/camping.png"
-    }
+  {
+    "id": 1,
+    "name": "circus",
+    "url": "/src/assets/images/circus.png"
+  },
+  {
+    "id": 2,
+    "name": "space station",
+    "url": "/src/assets/images/space-station.png"
+  },
+  {
+    "id": 3,
+    "name": "north pole",
+    "url": "/src/assets/images/north-pole.png"
+  },
+  {
+    "id": 4,
+    "name": "police station",
+    "url": "/src/assets/images/police-station.png"
+  },
+  {
+    "id": 5,
+    "name": "mountain peak",
+    "url": "/src/assets/images/mountain-peak.png"
+  },
+  {
+    "id": 6,
+    "name": "desert island",
+    "url": "/src/assets/images/desert-island.png"
+  },
+  {
+    "id": 7,
+    "name": "conference",
+    "url": "/src/assets/images/conference.png"
+  },
+  {
+    "id": 8,
+    "name": "spa salon",
+    "url": "/src/assets/images/spa-salon.png"
+  },
+  {
+    "id": 9,
+    "name": "swimming pool",
+    "url": "/src/assets/images/swimming-pool.png"
+  },
+  {
+    "id": 10,
+    "name": "submarine",
+    "url": "/src/assets/images/submarine.png"
+  },
+  {
+    "id": 11,
+    "name": "casino",
+    "url": "/src/assets/images/casino.png"
+  },
+  {
+    "id": 12,
+    "name": "aircraft",
+    "url": "/src/assets/images/aircraft.png"
+  },
+  {
+    "id": 13,
+    "name": "school",
+    "url": "/src/assets/images/school.png"
+  },
+  {
+    "id": 14,
+    "name": "pirate ship",
+    "url": "/src/assets/images/pirate-ship.png"
+  },
+  {
+    "id": 15,
+    "name": "graveyard",
+    "url": "/src/assets/images/graveyard.png"
+  },
+  {
+    "id": 16,
+    "name": "camping",
+    "url": "/src/assets/images/camping.png"
+  }
 ]

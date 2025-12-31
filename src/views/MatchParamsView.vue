@@ -255,41 +255,46 @@
     position: absolute;
     left: 0;
     top: 0;
+    padding: 0 8px;
   }
   .match-parameters-section .parameters-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: center;
+    gap: 40px;
     align-items: center;
+    width: 100%;
+    max-width: 340px;
   }
   .match-parameters-section .parameters-container .counters-wrapper {
     display: grid;
-    grid-template-columns: auto 1fr 1fr;
-    row-gap: 8px;
+    grid-template-columns: 1fr auto;
+    row-gap: 28px;
+    column-gap: 16px;
+    width: 100%;
+    align-items: center;
   }
-  .players-counter-text {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  .spies-counter-text {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
+  .players-counter-text,
+  .spies-counter-text,
   .time-counter-text {
     grid-column: 1/2;
-    grid-row: 3/4;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--dark-gray);
+    letter-spacing: 0.2px;
+    margin-bottom: 0;
+    padding-left: 2px;
   }
   .players-counter-container {
-    grid-column: 3/4;
+    grid-column: 2/3;
     grid-row: 1/2;
   }
   .spies-counter-container {
-    grid-column: 3/4;
+    grid-column: 2/3;
     grid-row: 2/3;
   }
   .time-counter-container {
-    grid-column: 3/4;
+    grid-column: 2/3;
     grid-row: 3/4;
   }
   .match-parameters-section
@@ -297,9 +302,13 @@
     .counters-wrapper
     .counter-container {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
-    gap: 6px;
+    gap: 18px;
+    background: rgba(0, 0, 0, 0.03);
+    padding: 10px 18px;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   }
   .match-parameters-section
     .parameters-container
@@ -308,11 +317,17 @@
     span {
     display: grid;
     place-content: center;
-    width: 20px;
-    height: 20px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: var(--black-color);
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    background: var(--white-color);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    margin: 0 2px;
   }
   .match-parameters-section
     .parameters-container
@@ -324,17 +339,56 @@
     .counters-wrapper
     .counter-container
     .plus-button {
-    width: 18px;
-    height: 18px;
+    width: 38px;
+    height: 38px;
     border: none;
     cursor: pointer;
     border-radius: 50%;
-    background: rgba(0, 0, 0, 0);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 2.2rem;
+    color: var(--dark-gray);
+    border: 2px solid transparent;
+  }
+  .match-parameters-section
+    .parameters-container
+    .counters-wrapper
+    .counter-container
+    .minus-button:active,
+  .match-parameters-section
+    .parameters-container
+    .counters-wrapper
+    .counter-container
+    .plus-button:active {
+    transform: scale(0.93);
+    background: #e0e0e0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  }
+  .match-parameters-section
+    .parameters-container
+    .counters-wrapper
+    .counter-container
+    .minus-button:hover:not(.transparent),
+  .match-parameters-section
+    .parameters-container
+    .counters-wrapper
+    .counter-container
+    .plus-button:hover:not(.transparent) {
+    background: linear-gradient(135deg, #e0e0e0 0%, #c6ff00 100%);
+    color: var(--black-color);
+    border-color: var(--main-color);
+    box-shadow: 0 4px 12px rgba(198, 255, 0, 0.1);
+    transform: translateY(-2px) scale(1.05);
   }
   .transparent {
-    opacity: 0.5;
+    opacity: 0.35;
+    cursor: not-allowed;
+    pointer-events: none;
   }
 </style>

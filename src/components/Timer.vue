@@ -37,7 +37,7 @@
   import { useTimeout } from '../composables/useUtils'
 
   // Props y Emits
-  const emit = defineEmits(['openPopUp'])
+  defineEmits(['openPopUp'])
 
   // Router
   const router = useRouter()
@@ -132,7 +132,7 @@
     display: grid;
     place-content: center;
     width: 30%;
-    height: 38px;
+    height: 56px;
     border-radius: 4px;
   }
   .countdown-container .countdown p {
@@ -146,8 +146,8 @@
     margin: 0;
   }
   .countdown-container .stop-button {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     border: none;
     cursor: pointer;
     border-radius: 50%;
