@@ -1,30 +1,26 @@
 <template>
-    <LayoutDefault>
-        <template #header>
-            <Header />
-        </template>
-        <template #main>
-            <section class="locations-section">
-                <router-link class="close-button" to="/params">Back</router-link>
-                    <Locations />
-            </section>
-        </template>
-    </LayoutDefault>
+  <LayoutDefault>
+    <template #header>
+      <Header />
+    </template>
+    <template #main>
+      <section class="locations-section">
+        <router-link class="close-button" to="/params">Back</router-link>
+        <Locations />
+      </section>
+    </template>
+  </LayoutDefault>
 </template>
 
-<script>
-import LayoutDefault from '../components/layouts/LayoutDefault.vue'
-import Header from '../components/headers/Header.vue'
-import Locations from '../components/Locations.vue'
-import Countdown from '../components/Timer.vue'
-
-export default {
-    components: {LayoutDefault, Header, Locations, Countdown}
-}
+<script setup>
+  import LayoutDefault from '../components/layouts/LayoutDefault.vue'
+  import Header from '../components/headers/Header.vue'
+  import Locations from '../components/Locations.vue'
+  // Nota: Countdown no se usa en este componente
 </script>
 
 <style scoped>
-.locations-section {
+  .locations-section {
     width: 100%;
     max-width: 450px;
     height: calc(100vh - 140px);
@@ -35,6 +31,5 @@ export default {
     left: 0;
     top: 0;
     transition: all 800ms;
-}
-
+  }
 </style>

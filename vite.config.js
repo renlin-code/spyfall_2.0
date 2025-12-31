@@ -1,14 +1,41 @@
 import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue({
+      script: {
+        defineModel: true,
+        propsDestructure: true
+      }
+    })
+  ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  server: {
+    host: true,
+    port: 3000,
+    open: true
+  },
+  build: {
+    target: 'esnext',
+    minify: 'esbuild',
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vue-vendor': ['vue', 'vue-router']
+        }
+      }
+    }
+  },
+  optimizeDeps: {
+    include: ['vue', 'vue-router']
+  },
+  assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg', '**/*.json']
 })

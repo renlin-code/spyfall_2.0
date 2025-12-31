@@ -1,20 +1,21 @@
-@import "./reset.css";
+@import './reset.css';
 
 :root {
-  --main-color: #C6FF00;
-  --secondary-color: #EEFFB2;
+  --main-color: #c6ff00;
+  --secondary-color: #eeffb2;
   --black-color: #383737;
-  --dark-gray: #5A5A5A;
+  --dark-gray: #5a5a5a;
   --white-color: #f5f5f5;
 }
 
 html {
   font-size: 62.5%;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   scroll-behavior: smooth;
 }
 
-header, main {
+header,
+main {
   position: relative;
 }
 
@@ -67,7 +68,7 @@ body {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  background-color: #FABABA;
+  background-color: #fababa;
   text-align: center;
   color: var(--black-color);
 }
@@ -117,5 +118,5 @@ body {
 
 .view-enter-from,
 .view-leave-to {
-    opacity: 0;
+  opacity: 0;
 }
