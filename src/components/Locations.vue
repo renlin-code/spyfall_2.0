@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h6 class="locations-title">Locations</h6>
+    <h6 class="locations-title">Локации</h6>
 
     <div class="locations-wrapper">
       <div

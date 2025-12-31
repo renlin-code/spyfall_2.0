@@ -8,9 +8,9 @@
         <!-- <router-link class="close-button" to="/">Back</router-link> -->
         <div action="/index.html" class="parameters-container">
           <div class="counters-wrapper">
-            <p class="primary-text players-counter-text">PLAYERS (NO SPY)</p>
-            <p class="primary-text spies-counter-text">SPY</p>
-            <p class="primary-text time-counter-text">MINUTES</p>
+            <p class="primary-text players-counter-text">НЕ ШПИОНЫ</p>
+            <p class="primary-text spies-counter-text">ШПИОНЫ</p>
+            <p class="primary-text time-counter-text">МИНУТЫ</p>
             <div class="counter-container players-counter-container">
               <span :style="`background-color: ${color}30`">{{
                 playersNoSpiesCount.amount
@@ -161,10 +161,10 @@
             to="/locations"
             :style="`border: 2px solid ${color}`"
             class="secondary-button"
-            >LOCATIONS</router-link
+            >ЛОКАЦИИ</router-link
           >
         </div>
-        <router-link to="/match" class="primary-button">START</router-link>
+        <router-link to="/match" class="primary-button">НАЧАТЬ</router-link>
       </section>
     </template>
   </LayoutDefault>

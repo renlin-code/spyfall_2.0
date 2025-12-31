@@ -7,7 +7,7 @@
       <section class="settings-section">
         <!-- <router-link class="close-button" to="/">Back</router-link> -->
         <h1 class="primary-title settings-title">
-          <span class="menu-item-icon settings-icon"></span> SETTINGS
+          <span class="menu-item-icon settings-icon"></span> НАСТРОЙКИ
         </h1>
         <div class="settings-section--articles-container">
           <!-- <section class="languages-section">
@@ -20,7 +20,7 @@
                     </section> -->
           <section class="themes-section">
             <h2 :style="`background-color: ${color}30`" class="secondary-title">
-              THEMES
+              ТЕМЫ
             </h2>
             <ul>
               <li @click="select(1)" :class="{ selected: selected === 1 }"></li>

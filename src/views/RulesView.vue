@@ -21,51 +21,25 @@
               />
             </svg>
           </span>
-          RULES
+          ПРАВИЛА
         </h1>
         <div class="rules-section--articles-container">
           <article>
-            <h2 class="secondary-title">At the start of game</h2>
+            <h2 class="secondary-title">В начале игры</h2>
             <p class="text-content">
-              In the game Spyfall, players find themselves in a certain
-              location. At least one player is a spy who does not know the
-              group's whereabouts. After everyone knows their identity, start
-              the timer. Any player or spy begins to ask a random question to
-              another player, who answers this question in any way he likes. Now
-              that player asks the next question, and so on. The player who
-              asked the last question can be interrogated immediately
-              afterwards.
+              В игре Spyfall игроки оказываются в определённой локации. Как минимум один игрок — шпион, который не знает, где находится группа. После того как все узнают свою роль, запустите таймер. Любой игрок или шпион начинает, задавая случайный вопрос другому игроку, который может ответить как угодно. Теперь этот игрок задаёт следующий вопрос, и так далее. Игрок, который задал последний вопрос, может быть сразу же допрошен в ответ.
             </p>
           </article>
           <article>
-            <h2 class="secondary-title">During de game</h2>
+            <h2 class="secondary-title">Во время игры</h2>
             <p class="text-content">
-              The goal of the spy is to find out the location or survive
-              undetected until the timer runs out. The goal of the rest of the
-              players is to find out who does not know the location and is
-              therefore a spy. So it's important to be smart about the questions
-              you ask, because if you want to find out if another player is a
-              spy, you can't reveal too much information to the real spy. The
-              spy must use the available information to vaguely answer questions
-              and go unnoticed. At any time during the game, a player can accuse
-              another player of being a spy. The timer stops and a vote is
-              taken. If everyone but the suspect agrees, the player's identity
-              is revealed. If he is a spy, the players win, otherwise the real
-              spy wins. If no consensus is reached, the game and the timer
-              continue to run.
+              Цель шпиона — узнать локацию или остаться незамеченным до конца времени. Цель остальных игроков — вычислить, кто не знает локацию и, следовательно, является шпионом. Важно быть осторожным с вопросами: если вы хотите выяснить, кто шпион, нельзя раскрывать слишком много информации. Шпион должен использовать доступную информацию, чтобы отвечать расплывчато и не вызывать подозрений. В любой момент игры игрок может обвинить другого в том, что он шпион. Таймер останавливается и проводится голосование. Если все, кроме подозреваемого, согласны — личность раскрывается. Если это шпион, игроки побеждают, иначе побеждает настоящий шпион. Если единогласия нет, игра и таймер продолжаются.
             </p>
           </article>
           <article>
-            <h2 class="secondary-title">At the end of the game</h2>
+            <h2 class="secondary-title">В конце игры</h2>
             <p class="text-content">
-              The game will end as soon as the timer runs out. After that, the
-              Spy has 10 seconds to exit and make a guess about the whereabouts
-              of the players. If the guess turns out to be wrong, then the spy
-              loses, and if it turns out to be correct, he wins. If the Spy
-              chooses not to reveal himself, players can debate and vote on who
-              they think is the Spy. The player with the most votes is
-              considered the party's chosen spy. If the group guesses correctly,
-              the group wins, otherwise the spy wins.
+              Игра заканчивается, как только истекает время. После этого у шпиона есть 10 секунд, чтобы попытаться угадать локацию. Если угадывает неверно — проигрывает, если верно — побеждает. Если шпион не раскрывает себя, игроки могут обсудить и проголосовать, кто, по их мнению, шпион. Игрок с наибольшим количеством голосов считается выбранным шпионом. Если группа угадывает правильно — побеждает группа, иначе — шпион.
             </p>
           </article>
         </div>

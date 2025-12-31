@@ -9,9 +9,9 @@
           <FigureHero />
         </div>
         <p>
-          The game where you can feel like a real detective or a cunning spy
+          Игра, в которой вы почувствуете себя настоящим детективом или хитрым шпионом
         </p>
-        <router-link to="/params" class="primary-button">PLAY</router-link>
+        <router-link to="/params" class="primary-button">ИГРАТЬ</router-link>
       </section>
     </template>
   </LayoutDefault>

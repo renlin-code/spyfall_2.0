@@ -29,82 +29,82 @@ export function useLocations() {
   const locationsData = [
     {
       id: 1,
-      name: 'circus',
+      name: 'цирк',
       url: circusImg
     },
     {
       id: 2,
-      name: 'space station',
+      name: 'космическая станция',
       url: spaceStationImg
     },
     {
       id: 3,
-      name: 'north pole',
+      name: 'северный полюс',
       url: northPoleImg
     },
     {
       id: 4,
-      name: 'police station',
+      name: 'полицейский участок',
       url: policeStationImg
     },
     {
       id: 5,
-      name: 'mountain peak',
+      name: 'горная вершина',
       url: mountainPeakImg
     },
     {
       id: 6,
-      name: 'desert island',
+      name: 'необитаемый остров',
       url: desertIslandImg
     },
     {
       id: 7,
-      name: 'conference',
+      name: 'конференция',
       url: conferenceImg
     },
     {
       id: 8,
-      name: 'spa salon',
+      name: 'спа-салон',
       url: spaSalonImg
     },
     {
       id: 9,
-      name: 'swimming pool',
+      name: 'бассейн',
       url: swimmingPoolImg
     },
     {
       id: 10,
-      name: 'submarine',
+      name: 'подводная лодка',
       url: submarineImg
     },
     {
       id: 11,
-      name: 'casino',
+      name: 'казино',
       url: casinoImg
     },
     {
       id: 12,
-      name: 'aircraft',
+      name: 'самолёт',
       url: aircraftImg
     },
     {
       id: 13,
-      name: 'school',
+      name: 'школа',
       url: schoolImg
     },
     {
       id: 14,
-      name: 'pirate ship',
+      name: 'пиратский корабль',
       url: pirateShipImg
     },
     {
       id: 15,
-      name: 'graveyard',
+      name: 'кладбище',
       url: graveyardImg
     },
     {
       id: 16,
-      name: 'camping',
+      name: 'кемпинг',
       url: campingImg
     }
   ]

@@ -5,7 +5,7 @@
     </template>
     <template #main>
       <section class="locations-section">
-        <router-link class="close-button" to="/params">Back</router-link>
+        <router-link class="close-button" to="/params">Назад</router-link>
         <Locations />
       </section>
     </template>

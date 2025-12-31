@@ -66,7 +66,7 @@
   })
 
   const buttonPauseWord = computed(() => {
-    return pauseTimer.value ? 'PLAY' : 'PAUSE'
+    return pauseTimer.value ? 'ПУСК' : 'ПАУЗА'
   })
 
   // Métodos
@@ -97,7 +97,6 @@
   // Watchers
   watch(timeInSeconds, (value) => {
     if (value === 0) {
-      console.log('Timer finished:', value)
       router.push('/')
       resetMatch()
     }

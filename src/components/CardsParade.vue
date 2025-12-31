@@ -1,6 +1,6 @@
 <template>
   <section class="showing-cards-section">
-    <h1 class="primary-title player-numb">PLAYER {{ currentPlayer }}</h1>
+    <h1 class="primary-title player-numb">ИГРОК {{ currentPlayer }}</h1>
     <div @click="revealCard" class="card-container">
       <div
         class="card-side card-back"
@@ -15,7 +15,7 @@
                 background: linear-gradient(45deg, rgba(56,55,55,1) 0%, ${color} 100%);
             `"
       >
-        REVEAL
+        ПОКАЗАТЬ
       </div>
     </div>
     <p
@@ -27,7 +27,7 @@
     </p>
     <transition name="view">
       <button v-if="showRole" @click="nextCard" class="primary-button">
-        NEXT
+        ДАЛЕЕ
       </button>
     </transition>
   </section>
@@ -55,7 +55,7 @@
   // Estado reactivo
   const spyJSON = reactive({
     id: '-',
-    name: 'you are spy!',
+    name: 'вы — шпион!',
     url: spyImage
   })
 

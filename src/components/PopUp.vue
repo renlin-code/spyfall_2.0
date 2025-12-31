@@ -1,7 +1,7 @@
 <template>
   <div class="popup--layer">
     <div class="popup">
-      <p>Are you sure you want to finish the game?</p>
+      <p>Вы уверены, что хотите завершить игру?</p>
       <div class="popup--buttons-container">
         <button @click="resetMatch()" class="popup--button">
           <span class="popup--icon">
@@ -21,7 +21,7 @@
               />
             </svg>
           </span>
-          Yes
+          Да
         </button>
         <button @click="$emit('closePopUp')" class="popup--button">
           <span class="popup--icon">
@@ -40,7 +40,7 @@
               />
             </svg>
           </span>
-          No
+          Нет
         </button>
       </div>
     </div>

@@ -20,7 +20,7 @@
                   />
                 </svg>
               </span>
-              HOME</router-link
+              ГЛАВНАЯ</router-link
             >
           </button>
         </li>
@@ -41,7 +41,7 @@
                   />
                 </svg>
               </span>
-              RULES</router-link
+              ПРАВИЛА</router-link
             >
           </button>
         </li>
@@ -62,7 +62,7 @@
                   />
                 </svg>
               </span>
-              SETTINGS</router-link
+              НАСТРОЙКИ</router-link
             >
           </button>
         </li>
@@ -82,7 +82,7 @@
                 />
               </svg>
             </span>
-            SHARE
+            ПОДЕЛИТЬСЯ
           </button>
         </li>
       </ul>
